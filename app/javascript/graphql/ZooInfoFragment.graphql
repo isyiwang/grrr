@@ -1,0 +1,9 @@
+fragment ZooInfo on Zoo {
+  name,
+  animals {
+    id,
+    name,
+    gender,
+    species
+  }
+}

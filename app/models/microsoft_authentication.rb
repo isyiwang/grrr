@@ -1,0 +1,2 @@
+class MicrosoftAuthentication < Authentication
+end

@@ -1,0 +1,9 @@
+query CurrentViewer {
+  viewer {
+    id
+    email
+    image
+    name
+    phoneNumber
+  }
+}

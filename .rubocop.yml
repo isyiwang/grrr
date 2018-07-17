@@ -1,0 +1,125 @@
+AllCops:
+  Exclude:
+    - app/javascript/graphqlTypes.js
+    - bin/**/*
+    - config/spring.rb
+    - config.ru
+    - db/schema.rb
+    - node_modules/**/*
+    - schema.json
+    - tmp/**/*
+    - vendor/**/*
+  TargetRubyVersion: 2.4.1
+  DisplayCopNames: true
+
+Layout/SpaceAroundOperators:
+  Enabled: false
+
+# Checks if there is a magic comment to enforce string literals
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Do not introduce global variables.
+Style/GlobalVars:
+  Enabled: true
+
+Style/TrailingCommaInArguments:
+  # Requires a comma after the last argument for all parenthesized method calls with arguments.
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInLiteral:
+  # Requires a comma after the last item of all non-empty array and hash literals.
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+# Document classes and non-namespace modules.
+Style/Documentation:
+  Enabled: false
+
+Style/YodaCondition:
+  Enabled: false
+
+Style/GuardClause:
+  # Disabling because it's too strict. E.g. this was considered bad:
+  #
+  #   unless max_d == 1
+  #      errors.add(
+  #        :foo,
+  #        "depth is too high: #{max_d}",
+  #      )
+  #      raise ActiveRecord::RecordInvalid.new(self)
+  #  end
+  Enabled: false
+
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: false
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+
+Style/Lambda:
+  Enabled: false
+
+Style/MultilineTernaryOperator:
+  Enabled: false
+
+Style/RaiseArgs:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+
+Metrics/MethodLength:
+  # We're adults -- if you feel you need a long method, just do it.
+  Enabled: false
+
+Metrics/AbcSize:
+  # A completely nonsensical metric.
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+# Avoid excessive block nesting.
+Metrics/BlockNesting:
+  Enabled: true
+  Max: 7
+
+Metrics/ClassLength:
+  # We're adults -- if you feel you need a super long class, go for it.
+  Enabled: false
+
+# A complexity metric that is strongly correlated to the number
+# of test cases needed to validate a method.
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Max: 10
+
+# A complexity metric geared towards measuring complexity for a human reader.
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Max: 10
+
+Rails:
+  Enabled: true
+
+Rails/Blank:
+  Enabled: false
+
+# Prefer `find_by` over `where.first`.
+Rails/FindBy:
+  Enabled: true
+
+# Prefer `all.find_each` over `all.find`.
+Rails/FindEach:
+  Enabled: true
+
+Rails/ReversibleMigration:
+  Enabled: false

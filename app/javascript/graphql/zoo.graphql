@@ -1,0 +1,7 @@
+#import "./ZooInfoFragment.graphql"
+
+query ZooQuery($id: ID!) {
+  zoo(id: $id) {
+    ...ZooInfo
+  }
+}

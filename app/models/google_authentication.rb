@@ -1,0 +1,2 @@
+class GoogleAuthentication < Authentication
+end
